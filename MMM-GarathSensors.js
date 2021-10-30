@@ -40,7 +40,9 @@ Module.register("MMM-GarathSensors", {
 			return wrapper;
 		}
 
-		let sensorDataEntries = this.sensorData.sort((a, b) => a.address - b.address).entries();
+	  let sensorDataEntries = this.sensorData
+		.sort((a, b) => a.address.localeCompare(b.address))
+		.entries();
 
 		var table = document.createElement("table");
 		table.className = this.config.tableClass;
