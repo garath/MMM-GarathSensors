@@ -136,7 +136,7 @@ Module.register("MMM-GarathSensors", {
 	},
 
 	celsiusToFahrenheit: function (temperatureCelsius) {
-		return Math.round((9 / 5) * temperatureCelsius + 32);
+	  return ((9 / 5) * temperatureCelsius + 32).toFixed(1);
 	},
 
 	remapAddressName: function (address) {
